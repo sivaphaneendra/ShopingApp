@@ -1,0 +1,64 @@
+html {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: #FFFFFF;
+  margin: 0 0 21px;
+  width: 100%;
+}
+
+.app-header {
+    text-align: center;
+    text-align: center;
+    display: inline-block;
+    width: 90%;
+    font-size: 30px;
+    padding: 10px 5px;
+}
+
+.product-image .image{
+    width: 100px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.product-name, .product-price {
+    padding-left: 300px;
+}
+
+.product-add-cart {
+    float: right;
+}
+
+.product-add-cart {
+    display: inline-block;
+}
+
+.cart-count {
+    padding-left: 5px;    
+}
+
+.products-wrapper {
+    background:#F8F8F8;
+    max-height: 500px;
+    padding: 15px;
+    overflow-y: scroll;
+}
+
+.product-holder {    
+    background: white;
+    height: 50px;
+    margin: 10px;
+}
+
+.product-info {
+    padding: 5px;
+}
+
+.loading-icon {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
