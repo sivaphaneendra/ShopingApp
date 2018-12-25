@@ -1,3 +1,16 @@
-<p>
-  cart works!
+<p class="cart-header">
+  Cart details!
 </p>
+
+<div class="cart-wrapper">
+  <div *ngFor="let product of cartProducts" class="cart-holder">
+    <div class="cart-info">
+      <span class="product-image"><img src={{product.imgurl}} alt="product_image" class="image"/></span>
+      <span class="product-name">{{product.name}}</span>
+      <span class="product-price">{{product.price}}</span>
+      <div class="remove-item-cart">
+          <button class="remove-item-icon" (click)="delete(product)">Delete </button>
+      </div>
+    </div>
+  </div>
+</div>

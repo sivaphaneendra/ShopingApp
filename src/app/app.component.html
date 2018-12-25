@@ -1,29 +1,35 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
-  <div class="app-header">
-    Welcome to {{ title }}!
+<div class="product-details">
+  <div>
+    <div class="app-header">
+      Welcome to {{ title }}!
+    </div>
+    <span class="cart-symbol">
+      <i class="fa fa-shopping-cart"></i><label class="cart-count" (click)="openCartDetails()">{{cart_count}}</label>
+    </span>
   </div>
-  <span class="cart-symbol">
-    <i class="fa fa-shopping-cart"></i><label class="cart-count">{{cart_count}}</label>
-  </span>
-</div>
 
-<div class="products-wrapper" infiniteScroll
-		    [infiniteScrollDistance]="0"
-		    [infiniteScrollThrottle]="100"
-		    (scrolled)="onScroll()" [scrollWindow]="false">
-    <div *ngFor="let product of list_products" class="product-holder">
-      <div class="product-info">
-        <span class="product-image"><img src={{product.imgurl}} alt="product_image" class="image"/></span>
-        <span class="product-name">{{product.name}}</span>
-        <span class="product-price">{{product.price}}</span>
-        <div class="product-add-cart">
-            <button class="add-cart-icon" (click)="addCart(product)">Add to cart </button>
+  <div class="products-wrapper" infiniteScroll
+          [infiniteScrollDistance]="0"
+          [infiniteScrollThrottle]="100"
+          (scrolled)="onScroll()" [scrollWindow]="false">
+      <div *ngFor="let product of list_products" class="product-holder">
+        <div class="product-info">
+          <span class="product-image"><img src={{product.imgurl}} alt="product_image" class="image"/></span>
+          <span class="product-name">{{product.name}}</span>
+          <span class="product-price">{{product.price}}</span>
+          <div class="product-add-cart">
+              <button class="add-cart-icon" (click)="addCart(product)">Add to cart </button>
+          </div>
         </div>
       </div>
-    </div>
+  </div>
+
+  <div class="loading-icon" *ngIf="loading">
+    <i class="fa fa-spinner fa-spin"></i>
+  </div>
 </div>
 
-<div class="loading-icon" *ngIf="loading">
-  <i class="fa fa-spinner fa-spin"></i>
+<div class="cart-details">
+  <router-outlet></router-outlet>
 </div>

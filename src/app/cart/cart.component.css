@@ -1,0 +1,43 @@
+.cart-header {
+    text-align: center;
+    display: inline-block;
+    width: 90%;
+    font-size: 20px;
+    padding: 10px 5px;
+}
+
+.cart-wrapper {
+    background:#F8F8F8;
+    max-height: 500px;
+    padding: 15px;
+    overflow-y: scroll;
+}
+
+.cart-holder {    
+    background: white;
+    height: 50px;
+    margin: 10px;
+}
+
+.cart-info {
+    padding: 5px;
+}
+
+.product-image .image{
+    width: 100px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.product-name, .product-price {
+    padding-left: 300px;
+}
+
+.remove-item-cart {
+    float: right;
+    margin: 10px;
+}
+
+.remove-item-cart {
+    display: inline-block;
+}
